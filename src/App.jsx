@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+/*import { useEffect } from "react"
 import { useState } from "react"
 
 
@@ -50,6 +50,19 @@ function App() {
    </>
   )
       
+}
+
+export default <App*/
+
+import Todo from "./compnents/Todo"
+
+function App() {
+  return (
+    <div>
+      <h1>TODO LIST</h1>
+      <Todo></Todo>
+    </div>
+  )
 }
 
 export default App
