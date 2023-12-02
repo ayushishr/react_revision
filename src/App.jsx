@@ -54,13 +54,12 @@ function App() {
 
 export default <App*/
 
-import Todo from "./compnents/Todo"
+import Fetch from "./compnents/Fetch"
 
 function App() {
   return (
     <div>
-      <h1>TODO LIST</h1>
-      <Todo></Todo>
+      <Fetch></Fetch>
     </div>
   )
 }
