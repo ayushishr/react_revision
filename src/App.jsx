@@ -54,14 +54,23 @@ function App() {
 
 export default <App*/
 
-import Fetch from "./compnents/Fetch"
 
-function App() {
+
+/*function App() {
   return (
     <div>
-      <Fetch></Fetch>
+      <header>Header</header>
+      <div className="main">
+        <nav>Navigation
+
+        </nav>
+        <main><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis voluptates ab fuga tenetur, quis dolorum perspiciatis voluptate rem enim dolores unde earum eaque minima odio doloribus tempore distinctio nulla beatae?</p></main>
+        <aside>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores fuga expedita nihil excepturi recusandae officia adipisci quae soluta optio ipsa!</aside>
+      </div>
+      <footer>Footer</footer>
+     
     </div>
   )
 }
 
-export default App
+export default App*/
