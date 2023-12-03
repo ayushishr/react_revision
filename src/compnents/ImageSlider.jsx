@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 
 function ImageSlider() {
   const images = [
@@ -6,6 +6,7 @@ function ImageSlider() {
     'https://via.placeholder.com/600x300/00FF00/FFFFFF?text=Image+2',
     'https://via.placeholder.com/600x300/0000FF/FFFFFF?text=Image+3',
     'https://via.placeholder.com/600x300/FFFF00/000000?text=Image+4',
+   
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
