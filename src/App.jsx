@@ -1,76 +1,34 @@
-/*import { useEffect } from "react"
-import { useState } from "react"
-
+import React, { useState } from "react"
+import Fetch from "./compnents/Fetch"
+export const channelContext = React.createContext()
+export const userContext = React.createContext()
+import SubmitForm from "./compnents/SubmitForm"
 
 
 function App() {
-  const data ={name:"", email: "", password: ""}
-  const [inputData, setInputData] = useState(data)
-  const [flag, setFlag] = useState(false)
-
-  useEffect(()=>{
-    console.log("registered")
-
-  } ,[flag])
-
-  function handleData(e){
-    setInputData({...inputData, [e.target.name]:e.target.value})
-    console.log(inputData)
+  const [count, setCount] = useState(0)
+  function increment(){
+    setCount(count +1)
   }
-
-  function handleSubmit(e){
-    e.preventDefault();
-    if(!inputData.name || !inputData.email || !inputData.password) {
-      alert("all feilds are mandatory")
-
-    }
-    else{
-      setFlag(true);
-    }
-
+  function decrement(){
+    setCount(count-1)
+  }
+  function reset(){
+    setCount(0)
   }
   return (
-   <>
-   <pre>{(flag)? <h2>hello {inputData.name} successfully registered</h2>:""}</pre>
-   <h1>RAGISTRATION FORM</h1>
-   <form onSubmit={handleSubmit}>
+    
     <div>
-    <input type='text' placeholder='enter your name' name='name' value={inputData.name} onChange={handleData}></input>
-    </div>
-    <div>
-    <input type='text' placeholder='enter your email' name='email' value={inputData.email} onChange={handleData}></input>
-    </div>
-    <div>
-    <input type='text' placeholder='enter your password' name='password' value={inputData.password} onChange={handleData}></input>
-    </div>
-    <div>
-      <button type="submit">submit</button>
-    </div>
-   </form>
-   </>
-  )
-      
-}
-
-export default <App*/
-
-
-
-/*function App() {
-  return (
-    <div>
-      <header>Header</header>
-      <div className="main">
-        <nav>Navigation
-
-        </nav>
-        <main><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis voluptates ab fuga tenetur, quis dolorum perspiciatis voluptate rem enim dolores unde earum eaque minima odio doloribus tempore distinctio nulla beatae?</p></main>
-        <aside>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores fuga expedita nihil excepturi recusandae officia adipisci quae soluta optio ipsa!</aside>
-      </div>
-      <footer>Footer</footer>
-     
+      <channelContext.Provider value={'Ayushi'}>
+        <userContext.Provider value={{count,increment,decrement,reset}}>
+          
+   
+      <Fetch></Fetch>
+      <SubmitForm></SubmitForm>
+      </userContext.Provider>
+      </channelContext.Provider>
     </div>
   )
 }
 
-export default App*/
+export default App
